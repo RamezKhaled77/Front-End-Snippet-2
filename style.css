@@ -1,18 +1,29 @@
 body {
-  min-height: 100dvh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
   padding: 2%;
   background-color: #f0f0f0;
 }
 .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: fuchsia;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 0.8rem;
   -webkit-border-radius: 0.8rem;
   -moz-border-radius: 0.8rem;
   -ms-border-radius: 0.8rem;
   -o-border-radius: 0.8rem;
+
+  img {
+    width: 180px;
+  }
 }
 .box-1 {
   background-color: coral;
@@ -29,18 +40,24 @@ body {
 .box-5 {
   background-color: teal;
 }
-.grid-container {
+.grid-container-1 {
+  padding: 1rem;
+  background-color: #8b8b8b;
+  border-radius: 0.6rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   display: grid;
   grid-auto-columns: 200px;
   grid-auto-rows: 200px;
   gap: 1rem;
-  grid-template-areas:
-    "box-1 box-2 box-2 box-3"
-    "box-1 box-4 box-5 box-5";
+  grid-template-areas: "box-1 box-2 box-2 box-3" "box-1 box-4 box-5 box-5";
+  -webkit-border-radius: 0.6rem;
+  -moz-border-radius: 0.6rem;
+  -ms-border-radius: 0.6rem;
+  -o-border-radius: 0.6rem;
 }
 
 @media (max-width: 991px) {
-  .grid-container {
+  .grid-container-1 {
     grid-template-areas:
       "box-1 box-2 box-2 "
       "box-1 box-3 box-4 "
@@ -48,12 +65,27 @@ body {
   }
 }
 @media (max-width: 667px) {
-  .grid-container {
-    background-color: fuchsia;
+  .grid-container-1 {
     grid-template-areas:
       "box-1 box-1  "
       "box-2 box-2  "
       "box-3 box-4 "
       "box-5 box-5  ";
   }
+}
+
+.grid-container-2 {
+  width: 100%;
+  padding: 1rem;
+  background-color: #4bdff3;
+  border-radius: 0.6rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  justify-content: center;
+  gap: 1rem;
+  -webkit-border-radius: 0.6rem;
+  -moz-border-radius: 0.6rem;
+  -ms-border-radius: 0.6rem;
+  -o-border-radius: 0.6rem;
 }
